@@ -1,6 +1,6 @@
 # Foil Examples
 
-Example applications demonstrating how to use [Foil](https://getfoil.com) for AI agent monitoring and tracing.
+Example applications demonstrating how to use [Foil](https://getfoil.ai) for AI agent monitoring and tracing.
 
 ## Examples
 
