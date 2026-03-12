@@ -3,15 +3,14 @@
 
 const { Foil } = require('@getfoil/foil-js');
 
-// instrumentModules is omitted: this agent has a tool-calling loop.
-// The entire loop is traced manually via ctx.llmCall() in processMessage.
-const foil = new Foil({
+const customerService55 = new Foil({
   apiKey: process.env.FOIL_API_KEY,
-  baseUrl: 'http://localhost:5003/api',
-  agentName: 'agents33',
+  agentName: 'customer_service55',
 });
 
-process.on('SIGTERM', async () => { await foil.shutdown(); process.exit(0); });
-process.on('SIGINT', async () => { await foil.shutdown(); process.exit(0); });
+customerService55.ensureAgent({ name: 'customer_service55' });
 
-module.exports = { foil };
+process.on('SIGTERM', async () => { await customerService55.shutdown(); process.exit(0); });
+process.on('SIGINT', async () => { await customerService55.shutdown(); process.exit(0); });
+
+module.exports = { customerService55 };
